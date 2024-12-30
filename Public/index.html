@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Grocery Mart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .slider-container {
+          overflow: hidden;
+        }
+        .slider-track {
+          display: flex;
+          transition: transform 0.5s ease;
+        }
+      </style>
+    
+</head>
+<body>
+    <div>
+
+        <div class="header">
+            <div class="py-2 w-full bg-slate-400 p-12 text-white flex items-center justify-between">
+                <div class="flex items-center space-x-4 ">
+                    <div class="flex items-center space-x-1">
+                    <i class="fa fa-phone"></i>
+                  
+                    <h1 class="rounded-full hover:bg-slate-800 p-1 px-3">4554911952</h1>
+                    </div>
+                    <div>|</div>
+                    <div class="flex items-center space-x-1">
+                        <i class="fa fa-envelope"></i>
+                        <h1 class="rounded-full hover:bg-slate-800 p-1 px-3">Grocery28122024@gmail.com</h1>
+
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <h1 class="rounded-full hover:bg-slate-800 p-1 px-3">Register</h1>
+                    <div>|</div>
+                    <h1 class="rounded-full hover:bg-slate-800 p-1 px-3">Login</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+            <div class="py-1 bg-slate-500 flex items-center justify-between shadow-lg text-white   px-12 ">
+                <div>
+                <img src="Images/G-logo.png" alt="Logo" class="w-16 h-auto transform transition-transform duration-300 hover:scale-110" />
+                </div>
+                <div class="relative  flex items-center justify-center">
+                    <form>
+                    <input 
+                      type="text" 
+                      placeholder="Search" 
+                      class="w-full sm:w-64 md:w-96 lg:w-[400px] xl:w-[500px] p-2 pl-10 shadow-md rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                    />
+                    <i class="fa fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                    </form>
+                </div>
+                <div class=" flex items-center justify-center space-x-6 hover:rounded-full pr-10 ">
+                    <i class="fa fa-cart-plus rounded-full hover:bg-slate-800 py-2 px-3"></i>
+                    <div>
+                        <h1 class="rounded-full hover:bg-slate-800 p-1 px-3">profile</h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="py-1 bg-slate-700 px-12">
+                <ul class="flex items-center justify-center text-white space-x-4 ">
+                    <li class="rounded-full hover:bg-slate-800  px-3 text-sm"> Fruits and Vegetables</li>
+                    <li  class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm">Dairy and Eggs</li>
+                    <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm">Meat and Seafood</li>
+                    <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm">Grains and Pasta</li>
+                    <li class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm"> Canned and Jarred Goods</li>
+                    <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm">Snacks and Sweets</li>
+                    <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm"> Beverages</li>
+                    <li class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm">Frozen Foods</li>
+                    <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm">Condiments and Spices</li>
+                    <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm">Health and Beauty Products</li>
+                    <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm">Household Items</li>
+                    <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm">Pet Supplies</li>
+                    <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm"> International Foods</li>
+                </ul>
+
+            </div>
+        </div>
+
+
+
+        <div class="p-6">
+            <img src="images/ribbon.webp" alt="ribbon" class="rounded-xl" />
+        </div>
+
+
+        <div class="bg-gray-100 flex justify-center items-center  ">
+            <div class="relative w-11/12 py-4 ">
+              <!-- Left Arrow -->
+              <button id="prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-10">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+          
+              <!-- Carousel -->
+              <div class="slider-container">
+                <div id="slider" class="slider-track">
+                  <!-- Card 1 -->
+                  <div class="w-96   bg-white rounded-xl shadow-lg">
+                    <img src="Images/image1-party.webp" alt="Cakes" class="w-full rounded-t-lg placeholder: ">
+                    <!-- <div class="p-4">
+                      <h3 class="text-lg font-semibold">Cakes, Chocolates & Cookies</h3>
+                      <p class="text-red-500 font-bold text-xl mt-2">Up to 50% OFF</p>
+                      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Shop Now</button>
+                    </div> -->
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="min-w-[300px] mx-2 bg-white rounded-xl shadow-lg">
+                    <img src="Images/image2_soda.webp" alt="Beauty" class="w-full rounded-t-lg">
+                    <!-- <div class="p-4">
+                      <h3 class="text-lg font-semibold">Beauty & Grooming</h3>
+                      <p class="text-red-500 font-bold text-xl mt-2">Up to 50% OFF</p>
+                      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Shop Now</button>
+                    </div> -->
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="min-w-[300px] mx-2 bg-white rounded-xl shadow-lg">
+                    <img src="Images/image3_hosting.webp" alt="Hosting" class="w-full rounded-t-lg">
+                    <!-- <div class="p-4">
+                      <h3 class="text-lg font-semibold">Hosting Readiness</h3>
+                      <p class="text-red-500 font-bold text-xl mt-2">Up to 50% OFF</p>
+                      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Shop Now</button>
+                    </div> -->
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="min-w-[300px] mx-2 bg-white rounded-xl shadow-lg">
+                    <img src="Images/image3_hosting.webp" alt="Hosting" class="w-full rounded-t-lg">
+                    <!-- <div class="p-4">
+                      <h3 class="text-lg font-semibold">Hosting Readiness</h3>
+                      <p class="text-red-500 font-bold text-xl mt-2">Up to 50% OFF</p>
+                      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Shop Now</button>
+                    </div> -->
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="min-w-[300px] mx-2 bg-white rounded-xl shadow-lg">
+                    <img src="Images/image3_hosting.webp" alt="Hosting" class="w-full rounded-t-lg">
+                    <!-- <div class="p-4">
+                      <h3 class="text-lg font-semibold">Hosting Readiness</h3>
+                      <p class="text-red-500 font-bold text-xl mt-2">Up to 50% OFF</p>
+                      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Shop Now</button>
+                    </div> -->
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="min-w-[300px] mx-2 bg-white rounded-xl shadow-lg">
+                    <img src="Images/image3_hosting.webp" alt="Hosting" class="w-full rounded-t-lg">
+                    <!-- <div class="p-4">
+                      <h3 class="text-lg font-semibold">Hosting Readiness</h3>
+                      <p class="text-red-500 font-bold text-xl mt-2">Up to 50% OFF</p>
+                      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full">Shop Now</button>
+                    </div> -->
+                  </div>
+                  <!-- Add more cards as needed -->
+                </div>
+              </div>
+          
+              <!-- Right Arrow -->
+              <button id="next" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-10">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+        </div>
+
+        <div class="w-full">
+          <div class="p-6 ">
+            <img src="Images/ribbon2.jpg" alt="" class="rounded-lg" />
+          </div>
+        </div>
+
+<div  class="w-full bg-slate-800 py-6">
+
+<div class="relative w-full mt-4 px-8 ">
+  <div class="flex items-center justify-between px-8">
+    <h1 class="font-bold text-2xl text-white">Cold Drinks </h1>
+    <h1 class="font-bold cursor-pointer text-white">View All</h1>
+  </div>
+
+  <!-- Slider Buttons -->
+  <button id="prev2" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-10">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button id="next2" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-10">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+
+  <!-- Slider Container -->
+  <div id="slider2" class="w-full overflow-hidden relative mt-4 px-8">
+    <div class="flex transition-transform duration-300">
+      <!-- Card -->
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/ColdDrinks&Snacks/dietcoke.webp" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat similar cards -->
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/ColdDrinks&Snacks/Coca Cola.webp" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/ColdDrinks&Snacks/Sprite.webp" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/ColdDrinks&Snacks/mirinda.webp" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/ColdDrinks&Snacks/bisleri-soda.webp" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/ColdDrinks&Snacks/pepsi.webp" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+  
+
+
+  
+</div>
+
+
+
+<div class="relative w-full mt-4 px-8">
+  <div>
+  <h1 class="font-bold text-2xl text-white px-6"> Snacks</h1>
+  </div>
+
+<!-- Slider Buttons -->
+<button id="prev3" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-50">
+  <i class="fas fa-chevron-left"></i>
+</button>
+<button id="next3" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-50">
+  <i class="fas fa-chevron-right"></i>
+</button>
+
+<!-- Slider Container -->
+<div id="slider3" class="w-full overflow-hidden relative mt-4 px-8">
+  <div class="flex transition-transform duration-300">
+    <!-- Card -->
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/ColdDrinks&Snacks/bingo.webp" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat similar cards -->
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/ColdDrinks&Snacks/kurkure-masala.jpg" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/ColdDrinks&Snacks/haldiram.webp" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/ColdDrinks&Snacks/bikaji.webp" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/ColdDrinks&Snacks/lay-s-india.jpg" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/ColdDrinks&Snacks/lay.webp" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="w-full">
+  <div class="p-6 ">
+    <img src="Images/ribbon3.webp" alt="" class="rounded-lg" />
+  </div>
+</div>
+
+
+
+<div  class="w-full bg-lime-100 py-6">
+
+<div class="relative w-full mt-4 px-8 ">
+  <div class="flex items-center justify-between px-8">
+    <h1 class="font-bold text-2xl ">Fruits </h1>
+    <h1 class="font-bold cursor-pointer ">View All</h1>
+  </div>
+
+  <!-- Slider Buttons -->
+  <button id="prev4" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-10">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button id="next4" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-10">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+
+  <!-- Slider Container -->
+  <div id="slider4" class="w-full overflow-hidden relative mt-4 px-8">
+    <div class="flex transition-transform duration-300">
+      <!-- Card -->
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/Fruits/Apple.jpeg" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat similar cards -->
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/Fruits/Wholesale Bananas in seawoods, ripe-unripe-bananas.jpg" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/Fruits/graps.jpg" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/Fruits/kivi.jpeg" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/Fruits/pomegranate-fruits.webp" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+        <img src="Images/Fruits/Watermelons.jpg" alt="" class="w-full p-2 rounded-t-lg" />
+        <div class="p-6">
+          <h1 class="font-bold">Coca-Cola 300ml</h1>
+          <h1 class="font-bold">₹35.00</h1>
+          <div class="flex space-x-4">
+            <h1 class="line-through text-slate-400">₹40.00</h1>
+            <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+          </div>
+          <div class="flex items-center justify-center mt-6">
+            <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+
+  
+
+
+  
+</div>
+
+
+
+<div class="relative w-full mt-4 px-8">
+  <div>
+  <h1 class="font-bold text-2xl  px-6">Vegetables</h1>
+  </div>
+
+<!-- Slider Buttons -->
+<button id="prev5" class="absolute left-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-50">
+  <i class="fas fa-chevron-left"></i>
+</button>
+<button id="next5" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-3xl text-gray-500 hover:text-gray-700 z-50">
+  <i class="fas fa-chevron-right"></i>
+</button>
+
+<!-- Slider Container -->
+<div id="slider5" class="w-full overflow-hidden relative mt-4 px-8">
+  <div class="flex transition-transform duration-300">
+    <!-- Card -->
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/Vegetables/th.jpeg" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat similar cards -->
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/Vegetables/spinach.jpg" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/Vegetables/broccoli.jpeg" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/Vegetables/Tamato.jpeg" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/Vegetables/Cabbage.jpg" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-80 flex-shrink-0 rounded-lg mx-2 bg-white shadow-lg">
+      <img src="Images/Vegetables/Cauliflower.jpeg" alt="" class="w-full p-2 rounded-t-lg" />
+      <div class="p-6">
+        <h1 class="font-bold">Coca-Cola 300ml</h1>
+        <h1 class="font-bold">₹35.00</h1>
+        <div class="flex space-x-4">
+          <h1 class="line-through text-slate-400">₹40.00</h1>
+          <h1 class="bg-green-100 w-fit px-1 rounded-md font-bold">12% OFF</h1>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button class="flex items-center justify-center border-blue-300 border rounded-lg w-48 py-4">Add</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- footer -->
+    <div class=" bg-slate-500">
+      <div class=" px-6 flex  justify-between py-4">
+        <div class="flex-col flex">
+          <h1 class="font-bold text-2xl ">categaries</h1>
+          <ul class="flex flex-col text-white space-x-4 ">
+            <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm w-fit">Fruits and Vegetables</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit">Dairy and Eggs</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Meat and Seafood</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Grains and Pasta</li>
+            <li class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit"> Canned and Jarred Goods</li>
+            <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Snacks and Sweets</li>
+            <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit"> Beverages</li>
+            <li class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit">Frozen Foods</li>
+            <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Condiments and Spices</li>
+            <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm w-fit">Health and Beauty Products</li>
+            <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm w-fit">Household Items</li>
+            <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm w-fit">Pet Supplies</li>
+            <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm w-fit"> International Foods</li>
+        </ul>
+        </div>
+
+
+        <div class="flex-col flex">
+          <h1 class="font-bold text-2xl ">Popular categaries</h1>
+          <ul class="flex flex-col text-white space-x-4 ">
+            <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm w-fit">Cold Drinks</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit">Snacks</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Fruits</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Vegetables</li>
+            
+        </ul>
+        </div>
+
+        <div class="flex-col flex">
+          <h1 class="font-bold text-2xl ">Customer Account</h1>
+          <ul class="flex flex-col text-white space-x-4 ">
+            <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm w-fit">My Account</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit">My Order</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">wishlist</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Delivery Addresses</li>
+            <li class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit">Grocery Mart Wallet</li>
+            
+        </ul>
+        </div>
+
+
+        <div class="flex-col flex">
+          <h1 class="font-bold text-2xl ">Help & Support</h1>
+          <ul class="flex flex-col text-white space-x-4 ">
+            <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm w-fit">About us</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit">FAQ</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Terms and Conditions</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Privacy Policy</li>
+            <li class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit">E-waste Policy</li>
+            <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Cancellation and Return Policy</li>
+            <li class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">Shipping and Delivery Policy</li>
+            
+        </ul>
+        </div>
+
+
+        <div class="flex-col flex">
+          <h1 class="font-bold text-2xl ">Contact Us</h1>
+          <ul class="flex flex-col text-white space-x-4 ">
+            <li class="rounded-full hover:bg-slate-800 py-1 px-3 text-sm w-fit">whats up: 7708076808066</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1 px-3 text-sm  w-fit">Call us: 87965072080</li>
+            <li  class="rounded-full hover:bg-slate-800  py-1  px-3 text-sm  w-fit">24x7</li>
+            <img src="Images/Footer/google-play-icon.svg" alt="" />
+            <img src="Images/Footer/ios_app_icon.svg" alt="" />
+        </ul>
+        </div>
+
+        
+
+
+      </div>
+      <div class="px-10 mt-8">
+        <h1 class="font-bold">© 2024 All rights reserved. Grocery Mart Ltd.</h1>
+
+      </div>
+      
+    </div>
+   
+        
+
+    </div>
+    <script src="app.js" ></script>
+</body>
+</html>
